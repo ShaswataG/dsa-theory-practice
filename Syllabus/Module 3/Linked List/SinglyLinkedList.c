@@ -147,7 +147,7 @@ int main() {
         scanf("%d", &choice);
         switch(choice) {
             case 1:
-                printf("INSERT\nPress 1 to insert at the beginning\nPress 2 to insert after a position\nPress 3 to insert at end\n");
+                printf("\nINSERT\nPress 1 to insert at the beginning\nPress 2 to insert after a position\nPress 3 to insert at end\n");
                 printf("Enter choice : ");
                 scanf("%d", &choice);
                 switch (choice)
@@ -175,7 +175,7 @@ int main() {
                 }
                 break;
             case 2:
-                printf("Press 1 to delete at the beginning\nPress 2 to delete a value\nPress 3 to delete at the end\n");
+                printf("\nDELETE\nPress 1 to delete at the beginning\nPress 2 to delete a value\nPress 3 to delete at the end\n");
                 printf("Enter choice : ");
                 scanf("%d", &choice);
                 switch (choice)
@@ -212,9 +212,11 @@ int main() {
                 }
                 break;
             case 3:
+                printf("\nDISPLAY\n");
                 display(head);
                 break;
             case 4:
+                printf("\nSEARCH\n");
                 printf("Enter value to search : ");
                 scanf("%d", &x);
                 t = search1(head, x);
@@ -232,6 +234,5 @@ int main() {
                 break;
         }
     }
-
     return 0;
 }
