@@ -21,8 +21,9 @@ int deleteHeap(int a[], int n) {
     a[1] = a[n];
     a[n] = val;
     int i = 1, j = 2*i;
-    while (j < n) {
+    while (j < n-1) {
         if(a[j+1] > a[j]) j++;
+        // }
         if (a[i] < a[j]) {
             swap(&a[i], &a[j]);
             i = j;
@@ -55,16 +56,23 @@ int main() {
     printf("Enter size : ");
     scanf("%d", &size);
     printf("Enter %d elements : ", size);
+    // int a[] = {0, 3, 6, 8, 10, 11, 14};
     int a[size+1];
     a[0] = 0;
     for (int i = 1; i <= size; i++) {
         scanf("%d", &a[i]);
     }
     printf("Before sorting, elements are : ");
-    display(a, size+1);
-    printf("After sorting, elements are : ");
-
+    display(a, 7);
     heapSort(a, size+1);
-    display(a, size+1);
+
+    // for (int i = 2; i <= 6; i++) {
+    //     insertHeap(a, i);
+    // }
+    // for (int i = 6; i > 1; i--) {
+    //     deleteHeap(a, i);
+    // }
+    printf("After sorting, elements are : ");
+    display(a, 7);
     return 0;
 }
